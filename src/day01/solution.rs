@@ -22,7 +22,7 @@ fn process_input_file() -> io::Result<(Vec<i32>, Vec<i32>)> {
                 right.push(numbers[1]);
             }
             Err(e) => {
-                eprintln!("Error reading line: {}", e);
+                return Err(e)
             }
         }
     }
